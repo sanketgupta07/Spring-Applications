@@ -6,6 +6,6 @@ This repository contains some of the sample implementation of spring projects an
 
 REST api based application.
 
-	1. REST-HATEOAS
+	1. REST-HATEOAS (Hypermedia As The Engine Of Application State)
 	
 		reference: https://spring.io/guides/gs/rest-hateoas/
