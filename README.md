@@ -44,7 +44,7 @@ REST api based application.
 	
 		reference: https://spring.io/guides/gs/rest-hateoas/
 		
-	2. REST-WITH-SPRING (in-progress)
+	2. REST-WITH-SPRING 
 	
 		sample Bookmark application.
 		reference: https://spring.io/guides/tutorials/bookmarks/
