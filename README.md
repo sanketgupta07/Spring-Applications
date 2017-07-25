@@ -2,7 +2,7 @@
 
 This repository contains some of the sample implementation of spring projects and concepts.
 
-###REST- REpresentational State Transfer
+### REST- REpresentational State Transfer
 <b>HTTP verbs</b>:
 
 We can use HTTP verbs to manipulate the data represented by those URIs.
