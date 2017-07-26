@@ -47,7 +47,7 @@ public class BookmarkController {
 	 * @throws UserNotFoundException
 	 */
 	@RequestMapping(method= RequestMethod.GET)
-	public Collection<Bookmark> getBookmarksForUser(@PathVariable("username")String username){
+	public Collection<Bookmark> getBookmarksForUser(@PathVariable String username){
 		this.validateUserAccount(username);
 		return this.bookmarkRepository.findByAccountUsername(username);
 	}
@@ -59,7 +59,7 @@ public class BookmarkController {
 	 * @return {@link ResponseEntity}
 	 */
 	@RequestMapping(method = RequestMethod.POST)
-	public ResponseEntity<?> addBookmark(@PathVariable("username")String username, @PathVariable Bookmark bookmark){
+	public ResponseEntity<?> addBookmark(@PathVariable String username, @PathVariable Bookmark bookmark){
 		this.validateUserAccount(username);
 		this.accountRepository.findByUsername(username).map(account -> {
 			Bookmark result = bookmarkRepository.save(new Bookmark(account,
