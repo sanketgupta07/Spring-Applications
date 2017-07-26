@@ -48,6 +48,10 @@ REST api based application.
 	
 		sample Bookmark application.
 		reference: https://spring.io/guides/tutorials/bookmarks/
+		
+	3. REST-CLIENT --RestTemplate
+		
+		reference: https://spring.io/guides/gs/consuming-rest/
     
 	
 		
