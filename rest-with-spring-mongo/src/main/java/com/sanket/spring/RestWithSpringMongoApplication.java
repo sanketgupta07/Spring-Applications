@@ -12,32 +12,27 @@ import com.sanket.spring.dao.BookmarkRepository;
 import com.sanket.spring.model.Account;
 import com.sanket.spring.model.Bookmark;
 
-/**
- * 
- * @author Sanket Gupta
- *
- */
 @SpringBootApplication
-public class Application{
+public class RestWithSpringMongoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(RestWithSpringMongoApplication.class, args);
 	}
 
 	@Bean
 	CommandLineRunner init(AccountRepository accountRepository, BookmarkRepository bookmarkRepository){
-		System.out.println("Initailizing");
+		
 		return (evt) -> Arrays.asList(
 				"sanket,ankit,abhay,hemant,prashant,aakash".split(","))
 				.forEach(
 						a -> {
 							Account account = accountRepository.save(new Account(a,
 									"password"));
+							System.out.println(account);
 							bookmarkRepository.save(new Bookmark(account,
 									"http://bookmark.com/1/" + a, "A description"));
 							bookmarkRepository.save(new Bookmark(account,
 									"http://bookmark.com/2/" + a, "A description"));
 						});
 	}
-	
 }

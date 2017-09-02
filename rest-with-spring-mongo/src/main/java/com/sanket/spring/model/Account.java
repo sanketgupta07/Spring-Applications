@@ -6,11 +6,6 @@ package com.sanket.spring.model;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
@@ -18,14 +13,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  *
  */
 
-@Entity
+
 public class Account {
 	
-	@Id
-	@GeneratedValue
-	private long id;
 	
-	@OneToMany(mappedBy="account")
+	private String id;
+	
 	private Set<Bookmark> bookmarks = new HashSet<>();
 	
 	@JsonIgnore
@@ -43,7 +36,8 @@ public class Account {
 	 * @param password
 	 * @param username
 	 */
-	public Account( String username,String password) {
+	public Account(String username, String password) {
+		
 		this.password = password;
 		this.username = username;
 	}
@@ -51,7 +45,7 @@ public class Account {
 	/**
 	 * @return the id
 	 */
-	public long getId() {
+	public String getId() {
 		return id;
 	}
 
